@@ -12,7 +12,6 @@ import software.bigbade.skriptbot.api.ICommand;
 import software.bigbade.skriptbot.utils.MessageUtils;
 import software.bigbade.skriptbot.utils.StringUtils;
 
-import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.Objects;
 import java.util.regex.Pattern;
@@ -26,7 +25,7 @@ public class ReactionListener extends ListenerAdapter {
     private JDA jda;
 
     @Override
-    public void onMessageReactionAdd(@Nonnull MessageReactionAddEvent event) {
+    public void onMessageReactionAdd(MessageReactionAddEvent event) {
         if (!event.isFromGuild()) {
             return;
         }
